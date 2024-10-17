@@ -1,0 +1,157 @@
+/* Full page background with a relaxing gradient similar to the image */
+body {
+    background: linear-gradient(135deg, #3131a8, #6d2ca3); /* Darker blue gradient */
+    font-family: 'Poppins', sans-serif; /* Sets a clean sans-serif font */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Removes default margin */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers content both horizontally and vertically */
+}
+
+/* Weather block with lighter blue to contrast the background */
+.weather {
+    width: 640px; /* Fixed width for weather block */
+    height: 530px; /* Fixed height to maintain 16:9 aspect ratio */
+    padding: 30px; /* Adds padding inside the block */
+    border-radius: 20px; /* Rounds corners for a softer look */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers content vertically */
+    background: linear-gradient(135deg,#ac46ff, #4b4bff); /* Gradient background for the weather block */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfectly centers the block on the page */
+}
+
+/* Weather block hover effect */
+.weather:hover {
+    transform: translate(-50%, -52%); /* Adds a slight lift on hover */
+}
+
+/* Search bar with a translucent blue tint */
+.search-bar {
+    display: flex;
+    align-items: center; /* Centers search bar contents vertically */
+    gap: 12px; /* Adds space between elements */
+    margin-bottom: 20px; /* Adds space below search bar */
+    background: linear-gradient(135deg, #3131a8, #6d2ca3); /* Translucent blue background */
+    border-radius: 40px; /* Rounds the search bar for a pill-shaped appearance */
+    padding: 5px 15px; /* Inner padding for the bar */
+    width: 100%; /* Full width inside the weather block */
+}
+
+.search-bar input {
+    width: 100%; /* Fills available width */
+    height: 50px; /* Fixed height for the input */
+    border: none; /* Removes default border */
+    outline: none; /* Removes default outline */
+    border-radius: 40px; /* Matches search bar's rounded corners */
+    padding-left: 20px; /* Adds padding inside input */
+    color: white; /* White text inside input */
+    background: transparent; /* Transparent input background */
+    font-size: 18px; /* Increases font size */
+    caret-color: black; /* Black text cursor */
+}
+
+.search-bar input::placeholder {
+    color: white; /* White placeholder text */
+}
+
+.search-bar img {
+    width: 50px; /* Size of the search button image */
+    padding: 10px; /* Adds padding around the image */
+    border-radius: 50%; /* Makes the search button circular */
+    background: linear-gradient(135deg,#ac46ff, #4b4bff); /* Gradient for the search button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: all 0.2s ease; /* Smooth hover transition */
+}
+
+.search-bar img:hover {
+    transform: scale(1); /* Keeps the scale the same but adds emphasis */
+    background: linear-gradient(135deg,#e946ff, #4bdeff); /* Changes background gradient on hover */
+}
+
+/* Weather icon */
+.weather-icon {
+    width: 100px; /* Fixed width for the weather icon */
+    margin-top: 20px; /* Adds space above the icon */
+    animation: pulse 4s ease-in-out infinite; /* Adds pulsing animation */
+}
+
+/* Temperature and location text */
+.temperature {
+    color: black; /* Black text for readability */
+    font-size: 60px; /* Large text size for temperature */
+    font-weight: 600; /* Semi-bold font */
+}
+
+.location {
+    color: white; /* White text for the location */
+    font-size: 32px; /* Font size for location */
+    font-weight: 500; /* Medium weight font */
+    margin-bottom: 10px; /* Adds space below location */
+}
+
+/* Weather data section with lighter text */
+.weather-data {
+    width: 100%; /* Full width of the weather block */
+    margin-top: 10px; /* Adds space above the weather data */
+    color: white; /* White text */
+    display: flex;
+    justify-content: space-evenly; /* Evenly spaces out data columns */
+    text-align: center; /* Centers text inside columns */
+    padding: 10px; /* Adds padding inside the weather data section */
+    border-radius: 15px; /* Rounds the corners of the section */
+    background: linear-gradient(135deg, #3131a8, #6d2ca3); /* Translucent background */
+}
+
+/* Individual columns inside weather data */
+.weather-data .col {
+    display: flex;
+    flex-direction: column; /* Stacks column content vertically */
+    align-items: center; /* Centers column content */
+    gap: 5px; /* Adds small space between column items */
+    font-size: 12px; /* Smaller font for weather details */
+}
+
+.weather-data .col span {
+    display: block; /* Ensures each span is a block element */
+    font-size: 18px; /* Larger font size for important values */
+    font-weight: 700; /* Bold font for emphasis */
+}
+
+.weather-data .col img {
+    width: 28px; /* Fixed width for weather icons */
+    margin-top: 5px; /* Adds space above icons */
+    transition: transform 0.3s ease; /* Smooth rotation on hover */
+}
+
+.weather-data .col:hover img {
+    transform: rotate(20deg); /* Slight rotation on hover */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 400px) {
+    .weather {
+        width: 100%; /* Full width on smaller screens */
+        padding: 20px; /* Reduced padding */
+        height: auto; /* Allows height to adjust dynamically */
+    }
+
+    .temperature {
+        font-size: 50px; /* Slightly smaller font for temperature */
+    }
+
+    .location {
+        font-size: 28px; /* Slightly smaller font for location */
+    }
+
+    .weather-data {
+        flex-direction: column; /* Stacks data vertically */
+        gap: 20px; /* Adds more space between data sections */
+    }
+}
