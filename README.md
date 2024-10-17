@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Weather App
 
 This project is a simple weather app that displays the current weather conditions for a specific city. Users can type the name of a city in the search bar, and upon clicking the search button, the app retrieves and displays the weather data, including temperature, humidity, and wind speed.
@@ -37,18 +35,22 @@ This project is a simple weather app that displays the current weather condition
    ```bash
    git clone https://github.com/yourusername/weather-app.git
    cd weather-app
+   
    ```
 2. Install Dependencies:
    ```bash
    npm install
+   
    ```
 3. Build the project:
    ```bash
    npm run build
+   
    ```
 4. Run the project in development mode:
    ```bash
    npm run dev
+   
    ```
 5. Open the provided localhost link (e.g., http://localhost:3000) in your browser to view the app.
 
